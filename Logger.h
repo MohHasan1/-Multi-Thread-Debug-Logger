@@ -1,23 +1,21 @@
+#ifndef LOGGER_H
+#define LOGGER_H
 
-enum Level {
+enum LOG_LEVEL  {
     DEBUG, 
     WARNING, 
     ERROR, 
     CRITICAL
 };
 
-void InitializeLog() {
-    cout << "this is a test server, yet to implemenr \n";
-}
+/**
+ * @brief sets the server
+ *
+ * Detailed description of the destructor.
+ */
+void InitializeLog(); 
+void SetLogLevel(LOG_LEVEL _level); 
+void Log(LOG_LEVEL, const std::string &, const std::string &, int , const std::string &); 
+void ExitLog(); 
 
-void SetLogLevel(Level _level) {
-
-}
-
-void Log(Level _level, const std::string &_file, const std::string &_func, int _line, const std::string& _msg) {
-    std::cout << "Level: " << _level << ", File: " << _file << ", Function: " << _func << ", Line: " << _line << ", Message: " << _msg << std::endl;
-}
-
-void ExitLog() {
-    cout << "exiting\n";
-}
+#endif
