@@ -8,11 +8,7 @@ enum LOG_LEVEL  {
     CRITICAL
 };
 
-/**
- * @brief sets the server
- *
- * Detailed description of the destructor.
- */
+
 void InitializeLog(); 
 void SetLogLevel(LOG_LEVEL _level); 
 void Log(LOG_LEVEL, const std::string &, const std::string &, int , const std::string &); 
